@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Deakin Logo -->
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/Deakin_University_Logo_2017.svg" alt="Deakin University Logo" class="logo">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchFunction()">Search</button>
+        </div>
+    </header>
+
+    <!-- News Section -->
+<section class="news-section">
+    <h2>Latest News</h2>
+
+    <article class="news-item">
+        <h3>Deakin University Ranked in Top 1%      Globally</h3>
+        <p>Deakin University has been ranked among the top 1% of universities worldwide according to the latest QS World University Rankings.</p>
+        <span class="date">August 26, 2024</span>
+    </article>
+
+    <article class="news-item">
+        <h3>New Research Center for AI and Robotics</h3>
+        <p>Deakin has announced the opening of a new research center dedicated to the advancement of AI and robotics technologies.</p>
+        <span class="date">August 22, 2024</span>
+    </article>
+
+</section>
+
+        <!-- Add more news items as needed -->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
