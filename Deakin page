@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deakin Student Portal</title>
+    <title>School Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Deakin University Student Portal</h1>
+        <h1>School Website</h1>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search..." onkeyup="searchFunction()">
+            <button onclick="searchFunction()">Search</button>
+        </div>
     </header>
     <main>
-        <button id="showTime">Show Current Time</button>
-        <p id="time"></p>
+        <h2>Search Results</h2>
+        <ul id="search-results">
+            <!-- Search results will be displayed here -->
+        </ul>
     </main>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
+
+
+
