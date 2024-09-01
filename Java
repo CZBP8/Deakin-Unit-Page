@@ -1,1 +1,90 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const eventsSection = document.getElementById('events-section');
 
+    const events = [
+        {
+            title: 'School Science Fair',
+            date: '2024-09-10',
+            description: 'Join us for the annual school science fair where students showcase their projects and experiments.'
+        },
+        {
+            title: 'Parent-Teacher Conference',
+            date: '2024-09-15',
+            description: 'Parents are invited to meet with teachers to discuss student progress and plans for the year.'
+        },
+        {
+            title: 'Fall Sports Day',
+            date: '2024-09-25',
+            description: 'A day of exciting sports events for students of all grades. Come and cheer for your teams!'
+        },
+        {
+            title: 'School Play: Hamlet',
+            date: '2024-10-01',
+            description: 'The drama club presents Shakespeare\'s Hamlet. Tickets available at the school office.'
+        }
+    ];
+
+    events.forEach(event => {
+        const eventCard = document.createElement('div');
+        eventCard.className = 'event-card';
+
+        const eventTitle = document.createElement('h3');
+        eventTitle.textContent = event.title;
+
+        const eventDate = document.createElement('p');
+        eventDate.className = 'event-date';
+        eventDate.textContent = event.date;
+
+        const eventDescription = document.createElement('p');
+        eventDescription.textContent = event.description;
+
+        eventCard.appendChild(eventTitle);
+        eventCard.appendChild(eventDate);
+        eventCard.appendChild(eventDescription);
+
+        eventsSection.appendChild(eventCard);
+    });
+});
+
+function searchFunction() {
+    const searchInput = document.getElementById('search-bar').value.toLowerCase();
+    const newsItems = document.querySelectorAll('.news-item');
+    const results = document.getElementById('search-results');
+
+    // Search in news items
+    newsItems.forEach(item => {
+        const title = item.querySelector('h3').innerText.toLowerCase();
+        const description = item.querySelector('p').innerText.toLowerCase();
+
+        if (title.includes(searchInput) || description.includes(searchInput)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // Additional search data
+    const data = [
+        'About Us',
+        'Admissions',
+        'Academics',
+        'Departments',
+        'Student Life',
+        'Contact Us',
+        'Library',
+        'Research',
+        'Events',
+        'News'
+    ];
+
+    // Clear previous results
+    results.innerHTML = '';
+
+    // Filter and display the search results
+    const filteredData = data.filter(item => item.toLowerCase().includes(searchInput));
+    filteredData.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        results.appendChild(li);
+    });
+}
