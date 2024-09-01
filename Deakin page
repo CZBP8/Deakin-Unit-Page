@@ -59,3 +59,38 @@ header {
     padding: 10px;
     border: 1px solid #ddd;
 }
+
+
+// script.js
+function searchFunction() {
+    const searchBar = document.getElementById('search-bar');
+    const filter = searchBar.value.toLowerCase();
+    const results = document.getElementById('search-results');
+
+    
+    const data = [
+        'About Us',
+        'Admissions',
+        'Academics',
+        'Departments',
+        'Student Life',
+        'Contact Us',
+        'Library',
+        'Research',
+        'Events',
+        'News'
+    ];
+
+   
+    results.innerHTML = '';
+
+   
+    const filteredData = data.filter(item => item.toLowerCase().includes(filter));
+
+   
+    filteredData.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        results.appendChild(li);
+    });
+}
