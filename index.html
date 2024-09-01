@@ -1,10 +1,52 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title> Home </title>
-<link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merged Website Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>SIT223-SIT753 - Professional Practice in IT</h1>
+    <!-- Header with Deakin Logo and Search Bar -->
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/74/Deakin_University_Logo_2017.svg" alt="Deakin University Logo" class="logo">
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search..." onkeyup="searchFunction()">
+            <button onclick="searchFunction()">Search</button>
+        </div>
+    </header>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <h2>Latest News</h2>
+
+        <article class="news-item">
+            <h3>Deakin University Ranked in Top 1% Globally</h3>
+            <p>Deakin University has been ranked among the top 1% of universities worldwide according to the latest QS World University Rankings.</p>
+            <span class="date">August 26, 2024</span>
+        </article>
+
+        <article class="news-item">
+            <h3>New Research Center for AI and Robotics</h3>
+            <p>Deakin has announced the opening of a new research center dedicated to the advancement of AI and robotics technologies.</p>
+            <span class="date">August 22, 2024</span>
+        </article>
+
+        <!-- Add more news items as needed -->
+    </section>
+
+    <!-- Events Section -->
+    <main>
+        <h2>Upcoming School Events</h2>
+        <section id="events-section">
+            <!-- Events will be dynamically added here -->
+        </section>
+
+        <h2>Search Results</h2>
+        <ul id="search-results">
+            <!-- Search results will be displayed here -->
+        </ul>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
