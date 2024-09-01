@@ -59,3 +59,53 @@ header {
 }
 
 
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const eventsSection = document.getElementById('events-section');
+
+    
+    const events = [
+        {
+            title: 'School Science Fair',
+            date: '2024-09-10',
+            description: 'Join us for the annual school science fair where students showcase their projects and experiments.'
+        },
+        {
+            title: 'Parent-Teacher Conference',
+            date: '2024-09-15',
+            description: 'Parents are invited to meet with teachers to discuss student progress and plans for the year.'
+        },
+        {
+            title: 'Fall Sports Day',
+            date: '2024-09-25',
+            description: 'A day of exciting sports events for students of all grades. Come and cheer for your teams!'
+        },
+        {
+            title: 'School Play: Hamlet',
+            date: '2024-10-01',
+            description: 'The drama club presents Shakespeare\'s Hamlet. Tickets available at the school office.'
+        }
+    ];
+
+    
+    events.forEach(event => {
+        const eventCard = document.createElement('div');
+        eventCard.className = 'event-card';
+
+        const eventTitle = document.createElement('h3');
+        eventTitle.textContent = event.title;
+
+        const eventDate = document.createElement('p');
+        eventDate.className = 'event-date';
+        eventDate.textContent = event.date;
+
+        const eventDescription = document.createElement('p');
+        eventDescription.textContent = event.description;
+
+        eventCard.appendChild(eventTitle);
+        eventCard.appendChild(eventDate);
+        eventCard.appendChild(eventDescription);
+
+        eventsSection.appendChild(eventCard);
+    });
+});
